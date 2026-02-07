@@ -1,0 +1,72 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+.cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# =====================
+# Environment & Secrets
+# =====================
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+
+# AWS credentials (never commit these)
+.aws/
+credentials
+config
+
+# =====================
+# Docker
+# =====================
+*.log
+docker-compose.override.yml
+
+# =====================
+# Kubernetes
+# =====================
+*.kubeconfig
+kubeconfig*
+*.yaml.bak
+*.yml.bak
+
+# =====================
+# Terraform (if used later)
+# =====================
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+
+# =====================
+# OS / Editor junk
+# =====================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# =====================
+# Node (if frontend added later)
+# =====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

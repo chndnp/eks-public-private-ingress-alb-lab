@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: private-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+spec:
+  rules:
+    - host: api-internal.<YOUR_DOMAIN>
+      http:
+        paths:
+          - path: /hobbies
+            pathType: Prefix
+            backend:
+              service:
+                name: internal-api-svc
+                port:
+                  number: 80
+          - path: /secrets
+            pathType: Prefix
+            backend:
+              service:
+                name: internal-api-svc
+                port:
+                  number: 80

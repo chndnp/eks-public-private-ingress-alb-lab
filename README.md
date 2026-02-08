@@ -7,7 +7,7 @@ A hands-on lab to build a production-style AWS EKS architecture with:
 - Multiple services exposed via Ingress
 - Clear security boundaries between internet-facing and internal APIs
 
-In this lab, we are trying to setup infra for 2 kinds of traffic on the same application- public traffic and private traffic. 
+In this lab, we are trying to setup infra for 2 kinds of traffic on the same application- public traffic and private traffic.  
 Many applications have some APIs exposed to the internet (like frontend pages, certain forms, etc) -> this is public.  
 And some APIs are private or internal to a network (like user data, order details, access data, etc) -> this is private.  
 As part of this, we are also touch-basing on domains and DNS, using goDaddy and route 53.  

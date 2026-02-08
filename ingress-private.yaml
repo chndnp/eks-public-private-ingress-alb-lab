@@ -3,11 +3,11 @@ kind: Ingress
 metadata:
   name: private-ingress
   annotations:
-    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
 spec:
+  ingressClassName: alb
   rules:
     - host: api-internal.<YOUR_DOMAIN>
       http:
